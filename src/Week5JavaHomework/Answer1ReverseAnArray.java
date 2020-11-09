@@ -1,0 +1,39 @@
+package Week5JavaHomework;
+// program to reverse an arrany of integer
+import java.util.Scanner;
+
+public class Answer1ReverseAnArray {
+
+    public static void main(String[] args) {
+        int counter, i =0, j=0, temp;
+        int number [] = new int[100];
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("How many number would you like to Enter : ");
+        counter = scanner.nextInt();
+
+for (i = 0; i <counter; i++)
+        {
+            System.out.print("Enter Array Element" + (i+1)+":");
+            number [i] = scanner.nextInt();
+
+        }
+        j= i-1;
+        i=0;
+        scanner.close();
+        while (i<j)
+        {
+            temp = number [i];
+            number [i] = number [j];
+            number[j] = temp;
+            i++;
+            j--;
+
+        }
+        System.out.print("Reversed Array :");
+        for (i=0;i<counter; i++)
+        {
+            System.out.print(number [i] +" ");
+        }
+
+    }
+}
